@@ -41,7 +41,7 @@ paths:
         name: customerId
         schema:
           type: integer
-        description: Customer
+        description: Customer Id
       responses:
         '200':
           description: response
