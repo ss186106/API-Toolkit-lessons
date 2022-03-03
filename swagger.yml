@@ -2,7 +2,9 @@ openapi: 3.0.0
 info:
   version: 1.0-SNAPSHOT-oas3
   title: ?lesson 1?
-  x-ncr-sec-app: TxApplication
+x-ncr-sec-app: TxApplication
+security:
+  - ncr-bearer-jwt: []
 servers:
   - url: /v1
 paths:
@@ -58,8 +60,6 @@ components:
       type: http
       scheme: bearer
       bearerFormat: JWT
-  security:
-    - ncr-bearer-jwt: []
   schemas:
     Account:
       type: object
