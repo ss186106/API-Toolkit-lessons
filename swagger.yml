@@ -52,6 +52,11 @@ paths:
                 items: 
                   $ref: '#/components/schemas/Account'
 components:
+  securitySchemes:
+    ncr-bearer-jwt:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
   schemas:
     Account:
       type: object
@@ -64,3 +69,6 @@ components:
           type: string
         type:
           type: string
+          enum:
+            - checking
+            - savings
